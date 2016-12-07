@@ -3,3 +3,4 @@
     Given: the server up and running
     When:  A GET request be performed targeting the index.html page
     Then:  A message (hello world) must be returned
+
