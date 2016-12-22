@@ -4,3 +4,10 @@
     When:  A GET request be performed targeting the index.html page
     Then:  A message (hello world) must be returned
 
+
+
+#Task2 - Search Oil
+
+    Given: the server up and running
+    When:  A GET request be performed targeting the index.html page
+    Then:  information about an Oil (name, type, description) will be shown

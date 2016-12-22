@@ -1,24 +1,28 @@
 (function(){
     'use strict';
 
-    angular.module('myApp')
-        .service('OilService', ['$http', function ($http) {
+var app = angular.module('myApp');
+    
 
-            var self = this;
-            self.getOilList = function () {
+    app.factory('OilService', ['$http','$q', function ($http,$q) {
+        var self = this;
+        self.getOilList = function () {
+            var deferred = $q.defer();
 
-                $http.get('http://localhost:8080/oil/?name=B d')
-                then(function(response) {
-                    return response.data;
-                });
-            };
+            $http.get('http://localhost:8080/oil/?name=B d')
+                .then(function(response) {
+                    deferred.resolve(response.data);
+                return;
+            });
+            return deferred.promise;
+        };
 
-            return {
+        return {
 
-                getOilList: function () {
-                    return self.list();
-                }
-            };
+            getOilList: function () {
+                return self.getOilList();
+            }
+        };
 
-        }]);
+    }]);
 })();
