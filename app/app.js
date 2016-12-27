@@ -7,7 +7,9 @@ angular.module('myApp', [
 // Declared route
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
-            .when('/home', {
+            .when('/', {
+                templateUrl: 'html/home.html'
+            }).when('/home', {
                 templateUrl: 'html/home.html'
             })
             .when('/oil', {
