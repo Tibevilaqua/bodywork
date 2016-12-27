@@ -6,8 +6,15 @@ angular.module('myApp', [
 ])
 // Declared route
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/home', {
-            templateUrl: 'html/home.html',
-            controller: 'HomeCtrl',
-        });
+        $routeProvider
+            .when('/home', {
+                templateUrl: 'html/home.html'
+            })
+            .when('/oil', {
+                templateUrl: 'html/oil.html',
+                controller: 'OilCtrl',
+            }).when('/signUp', {
+                templateUrl: 'html/user.html',
+                controller: 'UserCtrl',
+            });
     }]);

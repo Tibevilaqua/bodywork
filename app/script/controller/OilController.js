@@ -6,16 +6,19 @@ var app = angular.module('myApp');
 
 
 // Home controller
-app.controller('HomeCtrl',['$scope','OilService',loadController]);
+app.controller('OilCtrl',['$scope','OilService',loadController]);
 
 
 function loadController($scope,OilService) {
-    $scope.oil = null;
 
+        $scope.oil = null;
+    
+        
         OilService.getOilList()
             .then(function (result) {
             $scope.oil = result;
         })
+
 
 }
 })();

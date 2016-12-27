@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+
+
+    <body ng-controller="SignUpCtrl">
+        <form name="userForm" ng-submit="submitForm()">
+
+
+            <div ng-show="userSavedSuccessfully" class="alert alert-success">
+                <span>{{userSavedSuccessfully}}
+                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                </span>
+
+            </div>
+
+            <!--Name-->
+            <div class="form-group col-sm-10">
+                    <label class="control-label">First Name</label>
+                    <input type="text" class="form-control"  ng-model="user.name">
+
+            </div>
+
+            <!--Surname-->
+            <div class="form-group col-sm-10">
+                <label class="control-label">Surname</label>
+                <input class="form-control" type="text" ng-model="user.surname">
+            </div>
+
+            <!--Gender-->
+            <div class="form-group col-sm-10">
+                <label class="control-label">Gender</label>
+
+                <input type="radio"  value="FEMALE" ng-model="user.gender"/>
+                Female
+                <input type="radio"  value="MALE" ng-model="user.gender"/>
+                Male
+            </div>
+
+            <!--BirthDate-->
+            <div class="form-group col-sm-10">
+                <label class="control-label">Birth date</label>
+                <input placeholder="yyyy-mm-dd (1993-10-10)" type="date" ng-model="user.birthDate" />
+            </div>
+
+
+            <div class="form-group col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+    </body>
+
+</html>
