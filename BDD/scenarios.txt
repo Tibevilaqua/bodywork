@@ -39,3 +39,11 @@
     AND: There is an error in some field
     Then:  The user must be informed about the error
     AND: The register should not be created until the fields are acceptable
+
+
+#Task5 - Create default header
+
+    Given: The server up and running
+    When:  A User accesses the system
+    Then:  A default header must be shown
+    AND:   The it must be shown in all pages of the system
