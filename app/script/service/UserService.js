@@ -14,7 +14,7 @@
                    deferred.resolve();
                 })
                 .error(function (result) {
-                    deferred.reject(result);
+                    deferred.reject(result.errors);
 
                 });
             return deferred.promise;

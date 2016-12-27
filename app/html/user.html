@@ -7,40 +7,41 @@
         <form name="userForm" ng-submit="submitForm()">
 
 
-            <div ng-show="userSavedSuccessfully" class="alert alert-success">
-                <span>{{userSavedSuccessfully}}
-                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                </span>
-
+            <div ng-show="user.savedSuccessfully" class="alert alert-success text-center">
+                <span>{{user.savedSuccessfully}}</span>
             </div>
 
             <!--Name-->
-            <div class="form-group col-sm-10">
-                    <label class="control-label">First Name</label>
-                    <input type="text" class="form-control"  ng-model="user.name">
+            <div class="form-group col-sm-12" ng-class="{'has-error': user.nameError }">
+                    <label class="control-label ">First Name</label>
+                    <input type="text" class="form-control"  ng-model="user.name" aria-describedby="user.name_help">
+                    <p id="user.name_help" ng-if="user.nameError" class="help-block">Invalid name.</p>
 
             </div>
 
             <!--Surname-->
-            <div class="form-group col-sm-10">
+            <div class="form-group col-sm-12" ng-class="{'has-error': user.surnameError }">
                 <label class="control-label">Surname</label>
-                <input class="form-control" type="text" ng-model="user.surname">
+                <input class="form-control" type="text" ng-model="user.surname" aria-describedby="user.surname_help">
+                <p id="user.surname_help" ng-if="user.surnameError" class="help-block">Invalid surname.</p>
             </div>
 
             <!--Gender-->
-            <div class="form-group col-sm-10">
+            <div class="form-group col-sm-12" ng-class="{'has-error': user.genderError }">
                 <label class="control-label">Gender</label>
 
-                <input type="radio"  value="FEMALE" ng-model="user.gender"/>
+                <input type="radio"  value="FEMALE" ng-model="user.gender" aria-describedby="user.gender_help"/>
                 Female
-                <input type="radio"  value="MALE" ng-model="user.gender"/>
+                <input type="radio"  value="MALE" ng-model="user.gender" aria-describedby="user.gender_help"/>
                 Male
+                <p id="user.gender_help" ng-if="user.genderError" class="help-block">Invalid gender.</p>
             </div>
 
             <!--BirthDate-->
-            <div class="form-group col-sm-10">
+            <div class="form-group col-sm-12" ng-class="{'has-error': user.birthDateError }">
                 <label class="control-label">Birth date</label>
-                <input placeholder="yyyy-mm-dd (1993-10-10)" type="date" ng-model="user.birthDate" />
+                <input type="date" class="form-control" ng-model="user.birthDate" aria-describedby="user.birthDate_help"/>
+                <p id="user.birthDate_help" ng-if="user.birthDateError" class="help-block">Invalid birth date.</p>
             </div>
 
 

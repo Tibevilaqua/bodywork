@@ -16,9 +16,11 @@
 #Task3 - Save User
 
     Given: the server up and running
-    When:  A User wishes to sign up
-    Then:  A sign up page comprising the following field will be displayed to be filled (Name, Surname, Gender, Birth Date)
-    AND:   The user will be redirected to the home page.
+    AND: An User wishing to sign up
+    When:  A sign up page comprising the following fields will be displayed to be filled (Name, Surname, Gender, Birth Date)
+    AND:  The User fill it up
+    Then:  The user will be persisted in the database
+    AND: The user will be redirected to the home page
 
 
 #Task4 - Redirect to home.html when no URL is written
@@ -26,3 +28,14 @@
     Given: the server up and running
     When:  A User accesses the system without any URL
     Then:  The User must be redirected to the home page
+
+
+#Task5 - Show error to user when form is not filled properly
+
+   Given: the server up and running
+    AND: An User wishing to sign up
+    When:  A sign up page comprising the following fields will be displayed to be filled (Name, Surname, Gender, Birth Date)
+    AND:  The User fill it up
+    AND: There is an error in some field
+    Then:  The user must be informed about the error
+    AND: The register should not be created until the fields are acceptable
