@@ -60,3 +60,10 @@
     When:  the user fill the form with his email
     AND :  the email already exists in the database
     Then:  the user will receive a message that the email is already registered
+
+
+#Task9 - Validation message - Start returning description of the error
+
+    Given: The system is up and running
+    When:  Some validation error be thrown
+    Then:  The cause of the error should return together with its field

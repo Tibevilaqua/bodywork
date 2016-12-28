@@ -15,7 +15,7 @@
             <div class="form-group col-sm-12" ng-class="{'has-error': user.nameError }">
                     <label class="control-label ">First Name</label>
                     <input type="text" class="form-control"  ng-model="user.name" aria-describedby="user.name_help">
-                    <p id="user.name_help" ng-if="user.nameError" class="help-block">Invalid name.</p>
+                    <p id="user.name_help" ng-if="user.nameError" class="help-block">{{user.nameErrorMessage}}</p>
 
             </div>
 
@@ -23,7 +23,7 @@
             <div class="form-group col-sm-12" ng-class="{'has-error': user.surnameError }">
                 <label class="control-label">Surname</label>
                 <input class="form-control" type="text" ng-model="user.surname" aria-describedby="user.surname_help">
-                <p id="user.surname_help" ng-if="user.surnameError" class="help-block">Invalid surname.</p>
+                <p id="user.surname_help" ng-if="user.surnameError" class="help-block">{{user.usernameErrorMessage}}</p>
             </div>
 
             <!--Gender-->
@@ -34,14 +34,14 @@
                 Female
                 <input type="radio"  value="MALE" ng-model="user.gender" aria-describedby="user.gender_help"/>
                 Male
-                <p id="user.gender_help" ng-if="user.genderError" class="help-block">Invalid gender.</p>
+                <p id="user.gender_help" ng-if="user.genderError" class="help-block">{{user.genderErrorMessage}}</p>
             </div>
 
             <!--BirthDate-->
             <div class="form-group col-sm-12" ng-class="{'has-error': user.birthDateError }">
                 <label class="control-label">Birth date</label>
                 <input type="date" class="form-control" ng-model="user.birthDate" aria-describedby="user.birthDate_help"/>
-                <p id="user.birthDate_help" ng-if="user.birthDateError" class="help-block">Invalid birth date.</p>
+                <p id="user.birthDate_help" ng-if="user.birthDateError" class="help-block">{{user.birthDateErrorMessage}}</p>
             </div>
 
 
@@ -56,7 +56,7 @@
             <div class="form-group col-sm-12" ng-class="{'has-error': user.passwordError }">
                 <label class="control-label ">Password</label>
                 <input type="text" class="form-control"  ng-model="user.password" aria-describedby="user.password_help">
-                <p id="user.password_help" ng-if="user.passwordError" class="help-block">Invalid password.</p>
+                <p id="user.password_help" ng-if="user.passwordError" class="help-block">{{user.passwordErrorMessage}}</p>
 
             </div>
 
