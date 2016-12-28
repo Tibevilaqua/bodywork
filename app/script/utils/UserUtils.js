@@ -22,12 +22,18 @@
 
             },removeUserMessageValuesFromSession: function (user) {
 
-                user.nameError = null;
-                user.surnameError = null;
-                user.genderError = null;
-                user.birthDateError = null;
-                user.emailError = null;
-                user.passwordError = null;
+                user.nameError = undefined;
+                user.nameErrorMessage = undefined;
+                user.surnameError = undefined;
+                user.surnameErrorMessage = undefined;
+                user.genderError = undefined;
+                user.genderErrorMessage = undefined;
+                user.birthDateError = undefined;
+                user.birthDateErrorMessage = undefined;
+                user.emailError = undefined;
+                user.emailErrorMessage = undefined;
+                user.passwordError = undefined;
+                user.passwordErrorMessage = undefined;
 
             },
 

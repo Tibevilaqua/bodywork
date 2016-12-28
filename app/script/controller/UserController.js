@@ -31,8 +31,7 @@
                 }).catch(function(result){
 
 
-                //Error messages
-
+                //Error fields - messages
                 var nameError = ErrorUtils.getErrorByField("name",result);
                 $scope.user.nameError = nameError.name;
                 $scope.user.nameErrorMessage = nameError.message;
@@ -42,11 +41,9 @@
                 $scope.user.surnameError = surnameError.name;
                 $scope.user.surnameErrorMessage = surnameError.message;
 
-
                 var genderError = ErrorUtils.getErrorByField("gender",result);
                 $scope.user.genderError = genderError.name;
                 $scope.user.genderErrorMessage = genderError.message;
-
 
                 var birthDateError = ErrorUtils.getErrorByField("birthDate",result);
                 $scope.user.birthDateError = birthDateError.name;
