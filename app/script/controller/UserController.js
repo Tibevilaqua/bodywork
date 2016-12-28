@@ -35,6 +35,8 @@
                 $scope.user.surnameError = ErrorUtils.isFieldContained("surname",result) ? true : undefined;
                 $scope.user.genderError = ErrorUtils.isFieldContained("gender",result) ? true : undefined;
                 $scope.user.birthDateError = ErrorUtils.isFieldContained("birthDate",result) ? true : undefined;
+                $scope.user.emailError = ErrorUtils.isFieldContained("email",result) ? true : undefined;
+                $scope.user.passwordError = ErrorUtils.isFieldContained("password",result) ? true : undefined;
 
             });
 
