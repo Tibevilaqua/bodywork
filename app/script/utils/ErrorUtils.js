@@ -11,18 +11,16 @@
 
         return {
 
-            isFieldContained: function (field, error) {
+            getErrorByField: function (field, error) {
 
                 for(var i = 0; i < error.length; i++){
                     var fieldWithError = error[i].name;
                     if(fieldWithError == field){
-                        return true;
+                        return error[i];
                     }
                 }
-                return false;
+                return {name:null, message:null};
             }
-
-
         };
     }
 

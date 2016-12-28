@@ -30,13 +30,35 @@
 
                 }).catch(function(result){
 
+
                 //Error messages
-                $scope.user.nameError = ErrorUtils.isFieldContained("name",result) ? true : undefined;
-                $scope.user.surnameError = ErrorUtils.isFieldContained("surname",result) ? true : undefined;
-                $scope.user.genderError = ErrorUtils.isFieldContained("gender",result) ? true : undefined;
-                $scope.user.birthDateError = ErrorUtils.isFieldContained("birthDate",result) ? true : undefined;
-                $scope.user.emailError = ErrorUtils.isFieldContained("email",result) ? true : undefined;
-                $scope.user.passwordError = ErrorUtils.isFieldContained("password",result) ? true : undefined;
+
+                var nameError = ErrorUtils.getErrorByField("name",result);
+                $scope.user.nameError = nameError.name;
+                $scope.user.nameErrorMessage = nameError.message;
+
+
+                var surnameError = ErrorUtils.getErrorByField("surname",result);
+                $scope.user.surnameError = surnameError.name;
+                $scope.user.surnameErrorMessage = surnameError.message;
+
+
+                var genderError = ErrorUtils.getErrorByField("gender",result);
+                $scope.user.genderError = genderError.name;
+                $scope.user.genderErrorMessage = genderError.message;
+
+
+                var birthDateError = ErrorUtils.getErrorByField("birthDate",result);
+                $scope.user.birthDateError = birthDateError.name;
+                $scope.user.birthDateErrorMessage = birthDateError.message;
+
+                var emailError = ErrorUtils.getErrorByField("email",result);
+                $scope.user.emailError = emailError.name;
+                $scope.user.emailErrorMessage = emailError.message;
+
+                var passwordError = ErrorUtils.getErrorByField("password",result);
+                $scope.user.passwordError = passwordError.name;
+                $scope.user.passwordErrorMessage = passwordError.message;
 
             });
 

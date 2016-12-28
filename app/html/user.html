@@ -49,7 +49,7 @@
             <div class="form-group col-sm-12" ng-class="{'has-error': user.emailError }">
                 <label class="control-label ">Email</label>
                 <input type="text" class="form-control"  ng-model="user.email" aria-describedby="user.email_help">
-                <p id="user.email_help" ng-if="user.emailError" class="help-block">Invalid email.</p>
+                <p id="user.email_help" ng-if="user.emailError" class="help-block">{{user.emailErrorMessage}}</p>
             </div>
 
             <!--Password-->

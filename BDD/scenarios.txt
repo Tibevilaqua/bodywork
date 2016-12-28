@@ -48,10 +48,15 @@
     Then:  A default header must be shown
     AND:   The it must be shown in all pages of the system
 
-
-
 #Task7 - Save User  - Adding fields email and password
 
     Given: The sign up page is accessed
     When:  the user fill the form with the following additional fields (email and password)
     Then:  The user will be persisted in the database with the new fields
+
+#Task8 - Saving User - email not duplicate allowed
+
+    Given: The sign up page is accessed
+    When:  the user fill the form with his email
+    AND :  the email already exists in the database
+    Then:  the user will receive a message that the email is already registered
