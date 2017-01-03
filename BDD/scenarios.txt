@@ -67,3 +67,9 @@
     Given: The system is up and running
     When:  Some validation error be thrown
     Then:  The cause of the error should return together with its field
+
+#Task10 - Create a vertical left menu to navigate through pages
+
+    Given: The system is up and running
+    When:  An user be navigating throughout the system
+    Then:  The vertical menu localized in the left part of the screen must be shown at all times
