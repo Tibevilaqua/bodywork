@@ -12,9 +12,12 @@ angular.module('myApp', [
             }).when('/home', {
                 templateUrl: 'html/home.html'
             })
-            .when('/oil', {
-                templateUrl: 'html/oil.html',
+            .when('/oilSearch', {
+                templateUrl: 'html/oil/oilSearch.html',
                 controller: 'OilCtrl',
+            }).when('/oilSave', {
+            templateUrl: 'html/oil/oilSave.html',
+            controller: 'OilCtrl',
             }).when('/signUp', {
                 templateUrl: 'html/user.html',
                 controller: 'UserCtrl',

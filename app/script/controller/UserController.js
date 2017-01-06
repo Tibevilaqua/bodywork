@@ -58,9 +58,6 @@
                 $scope.user.passwordErrorMessage = passwordError.message;
 
             });
-
-
-
         }
     }
 })();

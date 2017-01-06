@@ -73,3 +73,10 @@
     Given: The system is up and running
     When:  An user be navigating throughout the system
     Then:  The vertical menu localized in the left part of the screen must be shown at all times
+
+
+#Task11 - Save OIL
+
+    Given: the server up and running
+    When:  The admin of the system log in and try to create a new OIL
+    Then:  The Oil will be persisted in the database

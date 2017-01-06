@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+
+<body ng-controller="OilCtrl">
+<form name="oilForm" ng-submit="submitForm()">
+
+
+    <div ng-show="oil.savedSuccessfully" class="alert alert-success text-center">
+        <span>{{oil.savedSuccessfully}}</span>
+    </div>
+
+    <!--Name-->
+    <div class="form-group col-sm-12" ng-class="{'has-error': oil.nameError }">
+        <label class="control-label ">Name</label>
+        <input type="text" class="form-control"  ng-model="oil.name" aria-describedby="oil.name_help">
+        <p id="oil.name_help" ng-if="oil.nameError" class="help-block">{{oil.nameErrorMessage}}</p>
+
+    </div>
+
+    <!--Type-->
+    <div class="form-group col-sm-12" ng-class="{'has-error': oil.typeError }">
+        <label class="control-label">Type</label>
+        <input class="form-control" type="text" ng-model="oil.type" aria-describedby="oil.type_help">
+        <p id="oil.type_help" ng-if="oil.typeError" class="help-block">{{oil.typeErrorMessage}}</p>
+    </div>
+
+    <!--Description-->
+    <div class="form-group col-sm-12" ng-class="{'has-error': oil.descriptionError }">
+        <label class="control-label">Description</label>
+        <input class="form-control" type="text" ng-model="oil.description" aria-describedby="oil.description_help">
+        <p id="oil.description_help" ng-if="oil.descriptionError" class="help-block">{{oil.descriptionErrorMessage}}</p>
+    </div>
+
+    <!--Image-->
+    <div class="form-group col-sm-12" ng-class="{'has-error': oil.imageError }">
+        <label class="control-label">Image</label>
+
+        <input type="file" onchange="angular.element(this).scope().onFileSelect(this.files)">
+
+        <p id="oil.image_help" ng-if="oil.imageError" class="help-block">{{oil.imageErrorMessage}}</p>
+    </div>
+
+    <div class="form-group col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+</body>
+
+</html>
